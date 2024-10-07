@@ -1,0 +1,103 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0f0f0e;
+    /* Background color of the navbar */
+}
+
+/* Brand name styles */
+.brand-name {
+    color: rgb(238, 254, 6);
+    font-size: 24px;
+}
+
+/* Navigation links styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between items */
+}
+
+/* Links as inline items */
+.nav-links li {
+    display: inline;
+}
+
+/* Link styles */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px; /* Increased padding for button-like appearance */
+    border-radius: 5px; /* Rounded corners */
+    transition: all 0.3s; /* Smooth transition for hover */
+    position: relative; /* Positioning for the glow effect */
+    background-color: transparent; /* No background by default */
+    border: 2px solid rgba(0, 255, 255, 0.5); /* Neon border */
+}
+
+/* Glow effect for links */
+.nav-links a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 5px; /* Match border radius */
+    background-color: rgba(0, 255, 255, 0.5); /* Neon color */
+    z-index: -1; /* Place behind the text */
+    filter: blur(8px); /* Glow effect */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.3s; /* Smooth transition for hover */
+}
+
+/* Hover effects for links */
+.nav-links a:hover {
+    color: #00ffff; /* Change text color on hover */
+    background-color: rgba(0, 255, 255, 0.2); /* Light neon background on hover */
+}
+
+/* Show glow on hover */
+.nav-links a:hover::before {
+    opacity: 1; /* Show glow on hover */
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none; /* Hidden by default */
+    flex-direction: column; /* Stack items vertically */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Hamburger bar styles */
+.hamburger div {
+    width: 25px; /* Width of hamburger bars */
+    height: 3px; /* Height of hamburger bars */
+    background-color: white; /* Color of hamburger bars */
+    margin: 3px 0; /* Space between bars */
+    transition: 0.4s; /* Transition for animations */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links */
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width */
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to left */
+        background-color: #edc608; /* Same background as navbar */
+        z-index: 1; /* Above other content */
+    }
+    
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .hamburger {
+        display: flex; /* Show hamburger icon */
+    }
+}

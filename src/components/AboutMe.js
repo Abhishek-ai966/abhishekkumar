@@ -39,7 +39,7 @@ const AboutMe = () => {
 
       {/* Profile picture with animation */}
       <img
-        src="https://media.licdn.com/dms/image/v2/D5603AQFmED7IQ6KNgQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724048381609?e=1733961600&v=beta&t=v31aWZs0kIn2jFsnmfOXd3oXuCzRXFwp3oqlHtIQEBE"
+        src="https://media.licdn.com/dms/image/v2/D5603AQFjXCH74sNXsw/profile-displayphoto-shrink_400_400/B56ZPjM1CqHoAk-/0/1734683611786?e=1740009600&v=beta&t=mDffF6w8N64LOpLkO0zb4MlPGBZGMHdH38RHVNEgdvk"
         alt="Abhishek Kumar"
         className="profile-pic"
       />
